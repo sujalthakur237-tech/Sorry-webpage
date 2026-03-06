@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Heartfelt Apology</title>
+    <title>I'm Sorry 💖</title>
     <style>
         * {
             margin: 0;
@@ -156,7 +156,7 @@
         }
 
         .message-box.show {
-            max-height: 500px;
+            max-height: 600px;
             opacity: 1;
         }
 
@@ -223,57 +223,56 @@
     </style>
 </head>
 <body>
-    <!-- Floating Flowers -->
+    <!-- Floral Background -->
     <div class="flower">🌸</div>
     <div class="flower">🌹</div>
     <div class="flower">🌺</div>
     <div class="flower">🌼</div>
-    <div class="flower">💐</div>
     <div class="flower">🌻</div>
+    <div class="flower">🌷</div>
 
     <!-- Main Container -->
     <div class="container">
-        <span class="emoji">💔</span>
+        <span class="emoji">💖</span>
         <h1>I'm Sorry</h1>
-        <p class="subtitle">I want to express my sincere apologies to you.</p>
+        <p class="subtitle">I want to apologize sincerely. Please hear me out.</p>
+        
+        <button class="sorry-btn" onclick="toggleMessage()">Let me explain...</button>
 
-        <!-- Sorry Button -->
-        <button class="sorry-btn" onclick="showMessage()">Show My Apology</button>
-
-        <!-- Message Box -->
+        <!-- Hidden Message -->
         <div class="message-box" id="messageBox">
             <div class="message-text">
-                <p>
-                    I want to sincerely apologize for my actions. I realize I made a mistake,
-                    and I understand how it may have hurt you.
-                </p>
-                <p>
-                    There's no excuse for what I did. I take full responsibility and deeply
-                    regret my behavior. You deserve better, and I'm truly sorry.
-                </p>
-                <p>
-                    I hope you can find it in your heart to forgive me. I'm committed to
-                    making things right and being better moving forward.
-                </p>
-                <p>
-                    Thank you for taking the time to listen. Your feelings matter to me.
-                </p>
-                <div class="signature">
-                    With sincere regrets,<br>
-                    Someone Who Cares
-                </div>
+                <p>I'm really sorry…</p>
+
+                <p>Whatever mistake I made, I sincerely apologize from the bottom of my heart. I never intended to hurt you. Sometimes a person says or does something without thinking, and later realizes how much it might have hurt someone.</p>
+                
+                <p>I will make sure that something like this never happens again, and I won't let it happen in the future.</p>
+                
+                <p>That's all I want to say… I am truly sorry.</p>
+                
+                <div class="signature">With all my sincerity,<br>Someone who cares about you 💕</div>
             </div>
         </div>
     </div>
 
+    <!-- Footer -->
     <div class="footer">
-        Created with 💕 and sincerity
+        Made with 💖
     </div>
 
+    <!-- JavaScript -->
     <script>
-        function showMessage() {
+        function toggleMessage() {
             const messageBox = document.getElementById('messageBox');
-            messageBox.classList.toggle('show');
+            const btn = document.querySelector('.sorry-btn');
+            
+            if (messageBox.classList.contains('show')) {
+                messageBox.classList.remove('show');
+                btn.textContent = 'Let me explain...';
+            } else {
+                messageBox.classList.add('show');
+                btn.textContent = 'Hide message';
+            }
         }
     </script>
 </body>
